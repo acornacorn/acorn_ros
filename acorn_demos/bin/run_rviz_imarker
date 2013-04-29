@@ -1,0 +1,24 @@
+#!/bin/bash
+
+if [[ -z $ROS_PACKAGE_PATH ]] ; then
+	echo "init ROS with sr6 first"
+	exit 1
+fi
+
+_e()
+{
+    echo "`colorcmd 0 2`$*`colorcmd d`"
+}
+_e "IN ANOTHER WINDOW YOU CAN RUN ONE OF:"
+_e "   /u/acorn/l/ros6/devel/lib/acorn_play1/acorn_play"
+_e "   /u/acorn/l/ros6/devel/lib/pr2_moveit_tutorials/interactivity_tutorial"
+_e "   /u/acorn/l/ros6/devel/lib/pr2_moveit_tutorials/collision_contact_tutorial"
+_e "   /u/acorn/l/ros6/devel/lib/pr2_moveit_tutorials/attached_body_tutorial"
+_e "   /u/acorn/l/ros6/devel/lib/pr2_moveit_tutorials/state_display_tutorial"
+_e "   "
+_e `colorcmd d`
+
+# run rviz with an interactive marker display
+
+roslaunch acorn_demos rviz_imarker.launch
+

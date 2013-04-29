@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [[ -z $ROS_PACKAGE_PATH ]] ; then
+	echo "init ROS with sr6 first"
+	exit 1
+fi
+
+
+#roslaunch /u/acorn/l/ros6/src/atlas_workspace/atlas_description/launch/atlas_visualize.launch "$@"
+
+
+sed -e 's|type="rviz"|& args="-d /u/acorn/.rviz/atlas_sachin.rviz"|' \
+	/u/acorn/l/ros6/src/atlas_workspace/atlas_description/launch/atlas_visualize.launch \
+	> /u/acorn/l/ros6/src/atlas_workspace/atlas_description/launch/atlas_visualize_acorn.launch
+
+roslaunch /u/acorn/l/ros6/src/atlas_workspace/atlas_description/launch/atlas_visualize_acorn.launch "$@"

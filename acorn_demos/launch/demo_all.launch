@@ -1,0 +1,60 @@
+<launch>
+
+  <!-- from pr2_description/robots/upload_pr2.launch -->
+
+    <!-- URDF -->
+    <param name="robot_description" command="$(find xacro)/xacro.py '$(find pr2_description)/robots/pr2.urdf.xacro'" />
+
+    <!-- SRDF THIS ONE IS NOT USED ... USE THE ONE BELOW -->
+    <param if="false" name="robot_description_semantic" textfile="$(find pr2_description)/robots/pr2.srdf" />
+
+
+  <node pkg="tf" type="static_transform_publisher" name="odom_broadcaster" args="0 0 0 0 0 0 odom_combined base_footprint 100" />
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="true" output="screen" />
+
+
+  
+  <!-- from pr2_moveit_config/launch/move_group.launch -->
+
+    <!-- from pr2_moveit_config/launch/planning_context.launch -->
+
+      <param name="robot_description_semantic" textfile="$(find pr2_moveit_config)/config/pr2.srdf" />
+
+      <group ns="robot_description_planning">
+        <rosparam command="load" file="$(find pr2_moveit_config)/config/joint_limits.yaml"/>
+      </group>
+
+    <!-- from pr2_moveit_config/launch/planning_pipeline.launch -->
+
+      <!-- from pr2_moveit_config/launch/ompl_planning_pipeline.launch -->
+
+        <param name="move_group/planning_plugin" value="ompl_interface_ros/OMPLPlanner" />
+        <param name="move_group/request_adapters" value="default_planner_request_adapters/AddTimeParameterization default_planner_request_adapters/FixWorkspaceBounds default_planner_request_adapters/FixStartStateBounds default_planner_request_adapters/FixStartStateCollision default_planner_request_adapters/FixStartStatePathConstraints" />
+
+        <param name="move_group/start_state_max_bounds_error" value="0.1" />
+
+        <rosparam ns="move_group" command="load" file="$(find pr2_moveit_config)/config/kinematics.yaml"/>
+        <rosparam ns="move_group" command="load" file="$(find pr2_moveit_config)/config/ompl_planning.yaml"/>
+
+
+
+
+    <param name="move_group/allow_trajectory_execution" value="false"/>
+    <param name="move_group/max_safe_path_cost" value="1"/>
+
+    <!-- Publish the planning scene of the physical robot so that rviz plugin can know actual robot -->
+    <param name="move_group/planning_scene_monitor/publish_planning_scene" value="true" />
+    <param name="move_group/planning_scene_monitor/publish_geometry_updates" value="true" />
+    <param name="move_group/planning_scene_monitor/publish_state_updates" value="true" />
+    <param name="move_group/planning_scene_monitor/publish_transforms_updates" value="true" />
+
+    <node name="move_group" pkg="moveit_ros_move_group" type="move_group_action_server" respawn="false" output="screen" />
+
+
+  <!-- from pr2_moveit_config/launch/moveit_rviz.launch -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find acorn_demos)/config/rviz_planning.rviz" respawn="false" output="screen">
+      <rosparam command="load" file="$(find pr2_moveit_config)/config/kinematics.yaml"/>
+    </node>
+
+</launch>

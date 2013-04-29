@@ -1,0 +1,21 @@
+<launch>
+
+  <!-- URDF - pr2_description is the one to use  -->
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find pr2_description)/robots/pr2.urdf.xacro'" /> 
+  <!-- SRDF - use from pr2_moveit_config.  The one in pr2_description is broken  -->
+  <param name="robot_description_semantic" textfile="$(find pr2_moveit_config)/config/pr2.srdf" />
+
+
+  <rosparam ns="acorn_node" command="load" file="$(find pr2_moveit_config)/config/kinematics.yaml"/>
+  <rosparam ns="acorn_play" command="load" file="$(find pr2_moveit_config)/config/kinematics.yaml"/>
+  <rosparam ns="interactivity_tutorial" command="load" file="$(find pr2_moveit_config)/config/kinematics.yaml"/>
+  <rosparam ns="collision_contact_tutorial" command="load" file="$(find pr2_moveit_config)/config/kinematics.yaml"/>
+  <rosparam ns="attached_body_tutorial" command="load" file="$(find pr2_moveit_config)/config/kinematics.yaml"/>
+  <rosparam ns="state_display_tutorial" command="load" file="$(find pr2_moveit_config)/config/kinematics.yaml"/>
+
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find acorn_demos)/config/rviz_imarker.rviz" respawn="false" output="screen">
+    <rosparam command="load" file="$(find pr2_moveit_config)/config/kinematics.yaml"/>
+  </node>
+
+</launch>

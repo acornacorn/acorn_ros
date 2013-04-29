@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [[ -z $ROS_PACKAGE_PATH ]] ; then
+	echo "init ROS with sr6 first"
+	exit 1
+fi
+
+cd /u/acorn/l/ros6/src/moveit_pr2/pr2_moveit_tutorials/interactivity
+roslaunch ./interactivity_tutorial.launch

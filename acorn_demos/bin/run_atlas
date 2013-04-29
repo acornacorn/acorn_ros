@@ -1,0 +1,39 @@
+#!/bin/bash
+
+if [[ -z $ROS_PACKAGE_PATH ]] ; then
+	echo "init ROS with sr6 first"
+	exit 1
+fi
+
+_usage()
+{
+	echo "$*"
+	echo "USAGE: run_atlas [name] [rviz-options]"
+	echo "   optional name is:"
+	echo "     2  - atlas2"
+	echo "     5  - atlas5_lar"
+	echo "     5l - atlas5_lar"
+	echo "     5p - atlas5_pelvis"
+	exit 1
+}
+
+OPT_launch=atlas2
+if (( $# > 0 )) ; then
+	case $1 in
+		2)	OPT_launch=atlas2 ; shift ;;
+		5)	OPT_launch=atlas5_lar ; shift ;;
+		5l)	OPT_launch=atlas5_lar ; shift ;;
+		5p)	OPT_launch=atlas5_pelvis ; shift ;;
+		*)  _usage "Bad first arg $1" ;;
+	esac
+fi
+
+
+
+#roslaunch /u/acorn/l/ros6/src/atlas_workspace/atlas_launch/launch/atlas2.launch
+
+sed -e 's|value="gdb[^"]*"|value="/u/acorn/bin/tw -wATLAS-GDB -e gdb --args"|' \
+	/u/acorn/l/ros6/src/atlas_workspace/atlas_launch/launch/$OPT_launch.launch \
+	> /u/acorn/l/ros6/src/atlas_workspace/atlas_launch/launch/${OPT_launch}_acorn.launch
+
+roslaunch /u/acorn/l/ros6/src/atlas_workspace/atlas_launch/launch/${OPT_launch}_acorn.launch "$@"
