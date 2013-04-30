@@ -15,5 +15,5 @@ _e "        gdb --args /home/acorn/ros6/devel/lib/moveit_ros_move_group/move_gro
 
 # Run everything EXCEPT move_group
 
-roslaunch acorn_demos demo_other.launch
+roslaunch acorn_demos demo_other.launch "$@"
 

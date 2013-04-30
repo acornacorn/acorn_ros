@@ -1,5 +1,5 @@
 <launch>
-  <!-- Launch RVIZ with rviz_imarker config
+  <!-- Launch RVIZ with rviz_df config
        ARGUMENTS:
         rviz_config_args - which rviz config to use (preceded by -d)
         rviz_debug       - true to debug rviz
@@ -7,14 +7,14 @@
   -->
 
 
-  <arg name="rviz_config_args" default="-d $(find acorn_demos)/config/rviz_imarker.rviz"/>
+  <arg name="rviz_config_args" default="-d $(find acorn_demos)/config/rviz_df.rviz"/>
   <arg name="rviz_debug" default="false"/>
   <arg name="debug" default="false"/>
+
 
   <include file="$(find acorn_demos)/launch/rviz_pr2.launch">
     <arg name="rviz_config_args" value="$(arg rviz_config_args)"/>
     <arg name="rviz_debug" value="$(arg rviz_debug)"/>
     <arg name="debug" value="$(arg debug)"/>
   </include> 
-
 </launch>

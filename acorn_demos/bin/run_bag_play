@@ -6,4 +6,4 @@ if [[ -z $ROS_PACKAGE_PATH ]] ; then
 fi
 
 cd /u/acorn/l/ros6/src/bag_play
-roslaunch launch/complete_rviz_person_touching_arms.launch
+roslaunch launch/complete_rviz_person_touching_arms.launch "$@"

@@ -6,4 +6,4 @@ if [[ -z $ROS_PACKAGE_PATH ]] ; then
 fi
 
 cd /u/acorn/l/ros6/src/moveit_pr2/pr2_moveit_tutorials/interactivity
-roslaunch ./collision_contact_tutorial.launch
+roslaunch ./collision_contact_tutorial.launch "$@"

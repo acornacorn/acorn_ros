@@ -20,5 +20,5 @@ _e `colorcmd d`
 
 # run rviz with an interactive marker display
 
-roslaunch acorn_demos rviz_imarker.launch
+roslaunch acorn_demos rviz_imarker.launch "$@"
 

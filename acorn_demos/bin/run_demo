@@ -6,4 +6,4 @@ if [[ -z $ROS_PACKAGE_PATH ]] ; then
 fi
 
 cd /u/acorn/l/ros6/src/moveit_pr2
-roslaunch pr2_moveit_config/launch/demo.launch
+roslaunch pr2_moveit_config/launch/demo.launch "$@"

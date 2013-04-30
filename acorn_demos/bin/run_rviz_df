@@ -5,5 +5,4 @@ if [[ -z $ROS_PACKAGE_PATH ]] ; then
 	exit 1
 fi
 
-# Run move_group and the rviz moveit demo
-roslaunch acorn_demos demo_all.launch "$@"
+roslaunch acorn_demos rviz_df.launch "$@"

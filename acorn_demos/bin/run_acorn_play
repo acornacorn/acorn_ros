@@ -6,4 +6,4 @@ if [[ -z $ROS_PACKAGE_PATH ]] ; then
 fi
 
 cd /u/acorn/l/ros6/src/acorn_play1
-roslaunch ./launch/ap_all.launch
+roslaunch ./launch/ap_all.launch "$@"
