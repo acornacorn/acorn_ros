@@ -1,0 +1,22 @@
+<launch>
+  <!-- Launch RVIZ
+       ARGUMENTS:
+		    rviz_config_args   - which rviz config to use (preceded by -d)
+        rviz_debug         - true to debug rviz
+        debug              - true to debug everything
+        gdb_launch_prefix1 - rviz launch prefix
+  -->
+
+
+  <arg name="rviz_config_args" default="-d $(find acorn_demos)/config/rviz_default.rviz"/>
+  <arg name="rviz_debug" default="false"/>
+  <arg name="debug" default="false"/>
+
+  <arg unless="$(arg rviz_debug)" name="gdb_launch_prefix1" default=""/>
+  <arg     if="$(arg rviz_debug)" name="gdb_launch_prefix1" default="tw -nRVIZ_GDB -e gdb --args" />
+  <arg unless="$(arg debug)" name="gdb_launch_prefix2" default=""/>
+  <arg     if="$(arg debug)" name="gdb_launch_prefix2" default="tw -nRVIZ_GDB -e gdb --args" />
+
+  <node name="rviz" pkg="rviz" type="rviz" launch-prefix="$(arg gdb_launch_prefix1) $(arg gdb_launch_prefix2)" args="$(arg rviz_config_args)" respawn="false" output="screen"/>
+
+</launch>
