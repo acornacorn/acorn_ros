@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [[ -z $ROS_PACKAGE_PATH ]] ; then
+	echo "init ROS with sr6 first"
+	exit 1
+fi
+
+roslaunch acorn_demos basic_controls_py.launch "$@"

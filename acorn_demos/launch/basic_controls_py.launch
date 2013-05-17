@@ -1,0 +1,31 @@
+<launch>
+  <!-- Launch RVIZ and basic_controls tutorial program 
+       ARGUMENTS:
+		    rviz_config_args   - which rviz config to use (preceded by -d)
+        rviz_debug         - true to debug rviz
+        node_debug         - true to debug basic_controls node
+        debug              - true to debug everything
+        gdb_launch_prefix1 - rviz launch prefix
+  -->
+
+
+  <arg name="rviz_config_args" default="-d $(find acorn_demos)/config/basic_controls.rviz"/>
+  <arg name="rviz_debug" default="false"/>
+  <arg name="node_debug" default="false"/>
+  <arg name="debug" default="false"/>
+
+  <arg unless="$(arg rviz_debug)" name="gdb_launch_prefix1" default=""/>
+  <arg     if="$(arg rviz_debug)" name="gdb_launch_prefix1" default="tw -nRVIZ_GDB -e gdb --args" />
+  <arg unless="$(arg debug)" name="gdb_launch_prefix2" default=""/>
+  <arg     if="$(arg debug)" name="gdb_launch_prefix2" default="tw -nRVIZ_GDB -e gdb --args" />
+
+  <arg unless="$(arg node_debug)" name="gdb_node_launch_prefix1" default=""/>
+  <arg     if="$(arg node_debug)" name="gdb_node_launch_prefix1" default="tw -nNODE_GDB -e gdb --args" />
+  <arg unless="$(arg debug)" name="gdb_node_launch_prefix2" default=""/>
+  <arg     if="$(arg debug)" name="gdb_node_launch_prefix2" default="tw -nNODE_GDB -e gdb --args" />
+
+  <node name="rviz" pkg="rviz" type="rviz" launch-prefix="$(arg gdb_launch_prefix1) $(arg gdb_launch_prefix2)" args="$(arg rviz_config_args)" required="true" respawn="false" output="screen"/>
+
+  <node name="basic_controls_py" pkg="interactive_marker_tutorials" type="basic_controls.py" launch-prefix="$(arg gdb_node_launch_prefix1) $(arg gdb_node_launch_prefix2)" required="true" respawn="false" output="screen"/>
+
+</launch>
