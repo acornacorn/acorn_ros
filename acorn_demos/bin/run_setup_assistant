@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [[ -z $ROS_PACKAGE_PATH ]] ; then
+	echo "init ROS with sr6 first"
+	exit 1
+fi
+
+roslaunch moveit_setup_assistant setup_assistant.launch
+
