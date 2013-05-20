@@ -1,6 +1,13 @@
+CONTENTS
+poseString                 - print Affine3d as 4x4 matrix
+posString                  - print vector
+matrixTFToEigen            - various conversions
+markDebugPosition          - add an rviz marker at a position.
+findFile                   - look up dir tree to find a file
+
+
 #include <Eigen/Geometry>
 #include <eigen_conversions/eigen_msg.h>
-
 
 static std::string poseString(const Eigen::Affine3d& pose, const std::string& pfx = "")
 {
@@ -102,5 +109,32 @@ void AtlasDisplay::markDebugPosition(int idx, const Eigen::Vector3d& pos, const 
 
   //m->setInteractiveObject(shared_from_this());
 }
+
+
+//###########################################################################
+//############################### FILESYSTEM ################################
+//###########################################################################
+look in PWD, parent, parent, ... to find a file.
+find_package(Boost REQUIRED system filesystem)
+#include <boost/filesystem.hpp>
+static boost::filesystem::path findFile(const boost::filesystem::path& relpath)
+{
+  if (relpath.is_absolute())
+    return relpath;
+  boost::filesystem::path base = boost::filesystem::current_path();
+  while (!base.empty())
+  {
+    if (boost::filesystem::exists(base / relpath))
+      return base / relpath;
+
+    base = base.parent_path();
+  }
+  return relpath;
+}
+
+// example:  
+//    shapes::createMeshFromResource(
+//                "file://" +
+//                findFile("src/geometric_shapes/test/resources/forearm_roll.stl").string());
 
 
