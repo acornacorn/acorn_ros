@@ -4,6 +4,7 @@ posString                  - print vector
 matrixTFToEigen            - various conversions
 markDebugPosition          - add an rviz marker at a position.
 findFile                   - look up dir tree to find a file
+CMAKE_print_all_vars       - print all vars from cmake file
 
 
 #include <Eigen/Geometry>
@@ -138,3 +139,15 @@ static boost::filesystem::path findFile(const boost::filesystem::path& relpath)
 //                findFile("src/geometric_shapes/test/resources/forearm_roll.stl").string());
 
 
+
+//###########################################################################
+//############################### CMAKE_print_all_vars ######################
+//###########################################################################
+#if XXX
+
+get_cmake_property(_variableNames VARIABLES)
+foreach (_variableName ${_variableNames})
+    message(STATUS "${_variableName}=${${_variableName}}")
+endforeach()
+
+#endif
