@@ -20,7 +20,8 @@
   <!-- URDF - pr2_description is the one to use  -->
   <param name="robot_description" command="$(find xacro)/xacro.py '$(find pr2_description)/robots/pr2.urdf.xacro'" /> 
   <!-- SRDF - use from pr2_moveit_config.  The one in pr2_description is broken  -->
-  <param name="robot_description_semantic" textfile="$(find pr2_moveit_config)/config/pr2.srdf" />
+  <!-- <param name="robot_description_semantic" textfile="$(find pr2_moveit_config)/config/pr2.srdf" /> -->
+  <param name="robot_description_semantic" textfile="$(find acorn_demos)/config/pr2_spheres.srdf" />
 
 
   <!-- load kinematics.yaml in various namespaces where it might be needed -->
