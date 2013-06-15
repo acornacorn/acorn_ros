@@ -8,6 +8,7 @@ Panels:
         - /Status1
         - /CollisionDistanceField1
         - /CollisionDistanceField1/Robot State1
+        - /CollisionDistanceField1/Robot State1/Collision Detection Info1
         - /TF1/Tree1
       Splitter Ratio: 0.561321
     Tree Height: 1158
@@ -60,298 +61,1452 @@ Visualization Manager:
         Active Group: right_arm
         Attached Object Color: 204; 51; 204
         Colliding Link Color: 255; 148; 16
+        Collision Detection Info:
+          Colliding Sphere Alpha: 0.3
+          Colliding Sphere Color: 255; 0; 0
+          Contact Points Color: 140; 0; 255
+          Contact Points Size: 0.02
+          Examine DF Point:
+            Examine DF Nearby Point Color: 0; 128; 0
+            Examine DF Point Color: 0; 255; 0
+            Examine DF Point Size: 0.005
+            Value: false
+            X index of point: 0
+            Y index of point: 0
+            Z index of point: 0
+          Show Colliding Spheres: false
+          Show Contact Points: false
+          Show Points in link used to generate Static Distance Field:
+            Alpha for Show Points in link used to generate Static Distance Field: 1
+            Color for Show Points in link used to generate Static Distance Field: 255; 0; 0
+            Pointsize for Show Points in link used to generate Static Distance Field: 0.006
+            Value: false
+          Show Static Distance Field Points:
+            Alpha for Show Static Distance Field Points: 1
+            Color for Show Static Distance Field Points: 255; 255; 0
+            Pointsize for Show Static Distance Field Points: 0.005
+            Value: false
         Collision Method: FCL
         Collision aware IK: false
         Joint Violation Link Color: 255; 0; 255
         Links:
-          Expand all joints: false
-          Expand all links: false
-          Hide details: false
-          Link Tree Style: List of visible links
+          All Links Enabled: true
+          Expand Joint Details: false
+          Expand Link Details: false
+          Expand Tree: false
+          Link Tree Style: Links in Alphabetic Order
           base_bellow_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
           base_footprint:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
+          base_laser_link:
+            Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
+            Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
+            Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
           base_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
           bl_caster_l_wheel_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
           bl_caster_r_wheel_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
           bl_caster_rotation_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
           br_caster_l_wheel_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
           br_caster_r_wheel_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
           br_caster_rotation_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
           double_stereo_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
           fl_caster_l_wheel_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
           fl_caster_r_wheel_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
           fl_caster_rotation_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
           fr_caster_l_wheel_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
           fr_caster_r_wheel_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
           fr_caster_rotation_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
           head_mount_kinect_ir_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
+          head_mount_kinect_ir_optical_frame:
+            Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
+            Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
+            Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
           head_mount_kinect_rgb_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
+          head_mount_kinect_rgb_optical_frame:
+            Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
+            Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
+            Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
           head_mount_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
           head_mount_prosilica_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
+          head_mount_prosilica_optical_frame:
+            Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
+            Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
+            Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
           head_pan_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
           head_plate_frame:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
           head_tilt_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
+          high_def_frame:
+            Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
+            Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
+            Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
+          high_def_optical_frame:
+            Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
+            Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
+            Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
+          imu_link:
+            Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
+            Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
+            Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
           l_elbow_flex_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
+          l_forearm_cam_frame:
+            Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
+            Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
+            Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
+          l_forearm_cam_optical_frame:
+            Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
+            Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
+            Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
           l_forearm_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
           l_forearm_roll_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
           l_gripper_l_finger_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
+          l_gripper_l_finger_tip_frame:
+            Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
+            Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
+            Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
           l_gripper_l_finger_tip_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
+          l_gripper_led_frame:
+            Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
+            Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
+            Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
           l_gripper_motor_accelerometer_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
+          l_gripper_motor_screw_link:
+            Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
+            Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
+            Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
+          l_gripper_motor_slider_link:
+            Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
+            Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
+            Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
           l_gripper_palm_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
           l_gripper_r_finger_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
           l_gripper_r_finger_tip_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
+          l_gripper_tool_frame:
+            Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
+            Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
+            Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
           l_shoulder_lift_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
           l_shoulder_pan_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
+          l_torso_lift_side_plate_link:
+            Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
+            Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
+            Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
           l_upper_arm_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
           l_upper_arm_roll_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
           l_wrist_flex_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
           l_wrist_roll_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
+          laser_tilt_link:
+            Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
+            Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
+            Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
           laser_tilt_mount_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
+          narrow_stereo_l_stereo_camera_frame:
+            Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
+            Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
+            Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
+          narrow_stereo_l_stereo_camera_optical_frame:
+            Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
+            Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
+            Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
+          narrow_stereo_link:
+            Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
+            Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
+            Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
+          narrow_stereo_optical_frame:
+            Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
+            Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
+            Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
+          narrow_stereo_r_stereo_camera_frame:
+            Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
+            Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
+            Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
+          narrow_stereo_r_stereo_camera_optical_frame:
+            Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
+            Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
+            Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
+          projector_wg6802418_child_frame:
+            Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
+            Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
+            Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
+          projector_wg6802418_frame:
+            Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
+            Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
+            Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
           r_elbow_flex_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
+          r_forearm_cam_frame:
+            Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
+            Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
+            Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
+          r_forearm_cam_optical_frame:
+            Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
+            Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
+            Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
           r_forearm_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
           r_forearm_roll_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
           r_gripper_l_finger_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
+          r_gripper_l_finger_tip_frame:
+            Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
+            Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
+            Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
           r_gripper_l_finger_tip_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
+          r_gripper_led_frame:
+            Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
+            Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
+            Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
           r_gripper_motor_accelerometer_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
+          r_gripper_motor_screw_link:
+            Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
+            Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
+            Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
+          r_gripper_motor_slider_link:
+            Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
+            Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
+            Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
           r_gripper_palm_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
           r_gripper_r_finger_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
           r_gripper_r_finger_tip_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
+          r_gripper_tool_frame:
+            Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
+            Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
+            Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
           r_shoulder_lift_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
           r_shoulder_pan_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
+          r_torso_lift_side_plate_link:
+            Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
+            Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
+            Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
           r_upper_arm_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
           r_upper_arm_roll_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
           r_wrist_flex_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
           r_wrist_roll_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
           sensor_mount_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
           torso_lift_link:
             Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
             Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
             Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
             Value: true
+          torso_lift_motor_screw_link:
+            Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
+            Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
+            Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
+          wide_stereo_l_stereo_camera_frame:
+            Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
+            Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
+            Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
+          wide_stereo_l_stereo_camera_optical_frame:
+            Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
+            Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
+            Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
+          wide_stereo_link:
+            Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
+            Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
+            Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
+          wide_stereo_optical_frame:
+            Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
+            Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
+            Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
+          wide_stereo_r_stereo_camera_frame:
+            Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
+            Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
+            Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
+          wide_stereo_r_stereo_camera_optical_frame:
+            Alpha: 1
+            Dummy example property: false
+            Number of Spheres Requested: 10
+            Show Axes: false
+            Show Current SRDF sphere representation: false
+            Show Generated Spheres: false
+            Show Link Bounding Cylinder: false
+            Show Points in link used to generate Static Distance Field: false
+            Show Static Distance Field Points: false
+            Show Trail: false
+            Sphere Gen Method: From SRDF
+            Sphere Qual Method: Max distance from link
+            Tolerance: 1
         Publish Robot State on TF: true
-        Robot Alpha: 1
+        Robot Alpha: 0.5
         Show Robot Collision: true
         Show Robot Visual: false
+        Sphere Generation:
+          Number of Spheres Requested: 10
+          Save Generated Spheres to SRDF: false
+          Show Current SRDF sphere representation:
+            Alpha for Show Current SRDF sphere representation: 0.5
+            Color for Show Current SRDF sphere representation: 0; 0; 255
+            Pointsize for Show Current SRDF sphere representation: 0.005
+            Value: false
+          Show Generated Spheres:
+            Alpha for Show Generated Spheres: 0.5
+            Color for Show Generated Spheres: 100; 100; 255
+            Pointsize for Show Generated Spheres: 0.005
+            Value: false
+          Show Link Bounding Cylinder:
+            Alpha for Show Link Bounding Cylinder: 0.5
+            Color for Show Link Bounding Cylinder: 128; 0; 255
+            Pointsize for Show Link Bounding Cylinder: 0.005
+            Value: false
+          Sphere Gen Method: From SRDF
+          Sphere Gen Resolution: 0.03
+          Sphere Qual Method: Max distance from link
+          Tolerance: 1
       Scene Geometry:
         Scene Alpha: 0.9
         Scene Color: 50; 230; 50
