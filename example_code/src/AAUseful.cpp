@@ -5,8 +5,11 @@ matrixTFToEigen            - various conversions
 markDebugPosition          - add an rviz marker at a position.
 findFile                   - look up dir tree to find a file
 CMAKE_print_all_vars       - print all vars from cmake file
+Eigen_tricks               - convert matrix and quaternion
 
-
+----------
+poseString
+----------
 #include <Eigen/Geometry>
 #include <eigen_conversions/eigen_msg.h>
 
@@ -33,6 +36,9 @@ static std::string poseString(const geometry_msgs::Pose& pose, const std::string
   return poseString(epose, pfx);
 }
 
+---------
+posString
+---------
 static std::string posString(const Eigen::Vector3d& pos, const std::string& pfx = "(", const std::string& sfx = ")")
 {
   std::stringstream ss;
@@ -48,7 +54,9 @@ static std::string posString(const Eigen::Vector3d& pos, const std::string& pfx 
   return ss.str();
 }
 
-
+---------------
+matrixTFToEigen
+---------------
 #include <tf_conversions/tf_eigen.h>
 void tf::matrixTFToEigen(const tf::Matrix3x3 &t, Eigen::Matrix3d &e);
 void tf::matrixEigenToTF(const Eigen::Matrix3d &e, tf::Matrix3x3 &t);
@@ -72,7 +80,9 @@ void tf::vectorEigenToTF(const Eigen::Vector3d &e, tf::Vector3 &t);
 
 
   
-
+-----------------
+markDebugPosition
+-----------------
 static boost::shared_ptr<rviz::MarkerBase> g_mark[20];
 static Ogre::SceneNode *g_mark_node = NULL;
 void AtlasDisplay::markDebugPosition(int idx, const Eigen::Vector3d& pos, const Eigen::Vector4f& color, double radius)
@@ -151,3 +161,16 @@ foreach (_variableName ${_variableNames})
 endforeach()
 
 #endif
+
+//###########################################################################
+//############################### Quat <--> Affine3d  #######################
+//###########################################################################
+Eigen_tricks
+
+Eigen::Affine3d a1;
+Eigen::Quaterniond quat1(a1.linear());    // if pure rotation
+Eigen::Quaterniond quat2(a1.rotation());  // extract rotation part
+a1 = Eigen::Translation3d(x,y,z) * quat * Eigen::Scaling(x,y,z);
+
+
+
